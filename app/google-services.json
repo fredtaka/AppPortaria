@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "921684656502",
+    "project_id": "appportaria-alfa1",
+    "storage_bucket": "appportaria-alfa1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921684656502:android:7d8a2fb9b9fdd05048ba57",
+        "android_client_info": {
+          "package_name": "com.fsct.android.appportaria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921684656502-afaevltlet144rk7j2e7jrbitql61n8v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fsct.android.appportaria",
+            "certificate_hash": "7f759fd67e00eefb2ebb3a719752770616ff9fb7"
+          }
+        },
+        {
+          "client_id": "921684656502-6bsan8j6trplp4l5usobpkh85eoan2gv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4Qs9htycTvQ8d0ID569nhknXvyia4KV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921684656502-6bsan8j6trplp4l5usobpkh85eoan2gv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

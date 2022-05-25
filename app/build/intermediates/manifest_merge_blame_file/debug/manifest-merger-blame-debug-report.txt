@@ -1,0 +1,126 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.fsct.android.appportaria"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:4:5-21:19
+12        android:allowBackup="true"
+12-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:5:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] /home/fred/.gradle/caches/transforms-3/d550992fa1a227fe65b4e7c4aea2960a/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@drawable/ic_sleep_0"
+15-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:6:9-44
+16        android:label="@string/app_name"
+16-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:7:9-41
+17        android:roundIcon="@mipmap/ic_launcher_sleep_tracker_round"
+17-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:8:9-68
+18        android:supportsRtl="true"
+18-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:9:9-35
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:10:9-40
+21        <activity android:name="com.fsct.android.appportaria.MainActivity" >
+21-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:11:9-17:20
+21-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:11:19-47
+22            <intent-filter>
+22-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:12:13-16:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:13:17-69
+23-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:13:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:15:17-77
+25-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:15:27-74
+26            </intent-filter>
+27        </activity>
+28
+29        <meta-data
+29-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:18:9-20:57
+30            android:name="preloaded_fonts"
+30-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:19:13-43
+31            android:resource="@array/preloaded_fonts" />
+31-->/home/fred/Documentos/IBGE/AppAndroid/AppPortaria/app/src/main/AndroidManifest.xml:20:13-54
+32
+33        <activity
+33-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:23:9-27:75
+34            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+34-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:24:13-93
+35            android:excludeFromRecents="true"
+35-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:25:13-46
+36            android:exported="false"
+36-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:26:13-37
+37            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+37-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:27:13-72
+38        <!--
+39            Service handling Google Sign-In user revocation. For apps that do not integrate with
+40            Google Sign-In, this service will never be started.
+41        -->
+42        <service
+42-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:33:9-37:51
+43            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+43-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:34:13-89
+44            android:exported="true"
+44-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:35:13-36
+45            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+45-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:36:13-107
+46            android:visibleToInstantApps="true" />
+46-->[com.google.android.gms:play-services-auth:20.2.0] /home/fred/.gradle/caches/transforms-3/dbc57f663326ccc2a7cb18b80c5739a9/transformed/jetified-play-services-auth-20.2.0/AndroidManifest.xml:37:13-48
+47
+48        <activity
+48-->[com.google.android.gms:play-services-base:18.0.1] /home/fred/.gradle/caches/transforms-3/2a99a839c4168b6a3e065199e704caec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+49            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+49-->[com.google.android.gms:play-services-base:18.0.1] /home/fred/.gradle/caches/transforms-3/2a99a839c4168b6a3e065199e704caec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+50            android:exported="false"
+50-->[com.google.android.gms:play-services-base:18.0.1] /home/fred/.gradle/caches/transforms-3/2a99a839c4168b6a3e065199e704caec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+51            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+51-->[com.google.android.gms:play-services-base:18.0.1] /home/fred/.gradle/caches/transforms-3/2a99a839c4168b6a3e065199e704caec/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+52
+53        <meta-data
+53-->[com.google.android.gms:play-services-basement:18.0.0] /home/fred/.gradle/caches/transforms-3/5d1b22e5a8fd916467607a8a006b922f/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+54            android:name="com.google.android.gms.version"
+54-->[com.google.android.gms:play-services-basement:18.0.0] /home/fred/.gradle/caches/transforms-3/5d1b22e5a8fd916467607a8a006b922f/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+55            android:value="@integer/google_play_services_version" />
+55-->[com.google.android.gms:play-services-basement:18.0.0] /home/fred/.gradle/caches/transforms-3/5d1b22e5a8fd916467607a8a006b922f/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+56
+57        <service
+57-->[androidx.room:room-runtime:2.4.2] /home/fred/.gradle/caches/transforms-3/cd842fc22a9bfe77f31c98e027e31d9c/transformed/room-runtime-2.4.2/AndroidManifest.xml:25:9-28:40
+58            android:name="androidx.room.MultiInstanceInvalidationService"
+58-->[androidx.room:room-runtime:2.4.2] /home/fred/.gradle/caches/transforms-3/cd842fc22a9bfe77f31c98e027e31d9c/transformed/room-runtime-2.4.2/AndroidManifest.xml:26:13-74
+59            android:directBootAware="true"
+59-->[androidx.room:room-runtime:2.4.2] /home/fred/.gradle/caches/transforms-3/cd842fc22a9bfe77f31c98e027e31d9c/transformed/room-runtime-2.4.2/AndroidManifest.xml:27:13-43
+60            android:exported="false" />
+60-->[androidx.room:room-runtime:2.4.2] /home/fred/.gradle/caches/transforms-3/cd842fc22a9bfe77f31c98e027e31d9c/transformed/room-runtime-2.4.2/AndroidManifest.xml:28:13-37
+61
+62        <provider
+62-->[androidx.emoji2:emoji2:1.0.0] /home/fred/.gradle/caches/transforms-3/8eadcc07e0c04f7a928b06d1b8dc0cba/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+63            android:name="androidx.startup.InitializationProvider"
+63-->[androidx.emoji2:emoji2:1.0.0] /home/fred/.gradle/caches/transforms-3/8eadcc07e0c04f7a928b06d1b8dc0cba/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+64            android:authorities="com.fsct.android.appportaria.androidx-startup"
+64-->[androidx.emoji2:emoji2:1.0.0] /home/fred/.gradle/caches/transforms-3/8eadcc07e0c04f7a928b06d1b8dc0cba/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+65            android:exported="false" >
+65-->[androidx.emoji2:emoji2:1.0.0] /home/fred/.gradle/caches/transforms-3/8eadcc07e0c04f7a928b06d1b8dc0cba/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+66            <meta-data
+66-->[androidx.emoji2:emoji2:1.0.0] /home/fred/.gradle/caches/transforms-3/8eadcc07e0c04f7a928b06d1b8dc0cba/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+67                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+67-->[androidx.emoji2:emoji2:1.0.0] /home/fred/.gradle/caches/transforms-3/8eadcc07e0c04f7a928b06d1b8dc0cba/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+68                android:value="androidx.startup" />
+68-->[androidx.emoji2:emoji2:1.0.0] /home/fred/.gradle/caches/transforms-3/8eadcc07e0c04f7a928b06d1b8dc0cba/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+69            <meta-data
+69-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/fred/.gradle/caches/transforms-3/f005c6bab1ff89997b9ef1208886cb36/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+70                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+70-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/fred/.gradle/caches/transforms-3/f005c6bab1ff89997b9ef1208886cb36/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+71                android:value="androidx.startup" />
+71-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/fred/.gradle/caches/transforms-3/f005c6bab1ff89997b9ef1208886cb36/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+72        </provider>
+73    </application>
+74
+75</manifest>

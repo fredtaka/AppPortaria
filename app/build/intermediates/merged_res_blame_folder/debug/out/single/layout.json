@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.fsct.android.appportaria.app-mergeDebugResources-39:/layout/fragment_cpf.xml",
+        "source": "com.fsct.android.appportaria.app-main-42:/layout/fragment_cpf.xml"
+    },
+    {
+        "merged": "com.fsct.android.appportaria.app-mergeDebugResources-39:/layout/fragment_regentrada.xml",
+        "source": "com.fsct.android.appportaria.app-main-42:/layout/fragment_regentrada.xml"
+    },
+    {
+        "merged": "com.fsct.android.appportaria.app-mergeDebugResources-39:/layout/list_item_registro.xml",
+        "source": "com.fsct.android.appportaria.app-main-42:/layout/list_item_registro.xml"
+    }
+]

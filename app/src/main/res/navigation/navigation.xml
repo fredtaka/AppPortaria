@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2019, The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!-- Note that the animations may show red in Android Studio;
+     however, they are present and working perfectly fine. -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/regentrada_fragment">
+
+    <fragment
+        android:id="@+id/regentrada_fragment"
+        android:name="com.fsct.android.appportaria.regentradatracker.RegentradaFragment"
+        android:label="@string/regentrada_fragment"
+        tools:layout="@layout/fragment_regentrada">
+        <action
+            android:id="@+id/action_regentradaFragment_to_cpfFragment"
+            app:destination="@id/cpf_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cpf_fragment"
+        android:name="com.fsct.android.appportaria.cpf.CpfFragment"
+        android:label="@string/cpf_fragment"
+        tools:layout="@layout/fragment_cpf">
+        <argument
+            android:name="registroKey"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_cpfFragment_to_regentradaFragment"
+            app:destination="@id/regentrada_fragment"
+            app:popUpTo="@id/regentrada_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

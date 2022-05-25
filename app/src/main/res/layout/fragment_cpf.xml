@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+
+colocar variável que indica se é entrada ou saída (vindo da tela principal)
+em função disso exibe imagem de seta de entrada ou de saída
+  -->
+
+<!-- Wrapping the layout into /layout to make it available with data binding. -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Data to make available to the XML via data binding. In this case,
+     the whole ViewModel, so that we can access the LiveData,
+     click handlers, and state variables. -->
+    <data>
+
+        <variable
+            name="cpfViewModel"
+            type="com.fsct.android.appportaria.cpf.CpfViewModel" />
+    </data>
+
+    <!-- Start of the visible fragment layout using ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".cpf.CpfFragment">
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:background="@color/colorAccent"
+            android:fontFamily="@font/roboto"
+            android:text="@string/texto_cpf"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintEnd_toStartOf="@id/editTextNumberCpf"
+            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextNumberCpf"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="60dp"
+            android:ems="11"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/title_text"/>
+
+        <Button
+            android:id="@+id/consultacpfbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Consulta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberCpf"
+            app:layout_constraintVertical_bias="0.11" />
+        <!--TODO: falta o onClick-->
+
+        <TextView
+            android:id="@+id/texto_barra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@color/colorAccent"
+            android:text="Nome consulta"
+            app:layout_constraintTop_toBottomOf="@+id/consultacpfbutton"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/nome_achado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/texto_barra"
+            app:layout_constraintBottom_toTopOf="@+id/aviso_usuario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/aviso_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="aviso"
+            app:layout_constraintTop_toBottomOf="@+id/nome_achado"
+            app:layout_constraintBottom_toTopOf="@+id/entrada_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <Button
+            android:id="@+id/entrada_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Confirma Entrada"
+            app:layout_constraintEnd_toStartOf="@+id/saida_button"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aviso_usuario"
+            app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <!--TODO falta o onClick-->
+
+
+        <Button
+            android:id="@+id/saida_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Confirma Saída"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/entrada_button"
+            app:layout_constraintTop_toBottomOf="@+id/aviso_usuario"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+        <!--TODO: falta o onClick-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.fsct.android.appportaria.app-mergeDebugResources-38:/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/home/fred/.gradle/caches/transforms-3/506ebc9ecdd674d88ba75797fef0098d/transformed/appcompat-1.4.1/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,196",
+                        "endColumns": "69,70,67",
+                        "endOffsets": "120,191,259"
+                    }
+                },
+                {
+                    "source": "/home/fred/.gradle/caches/transforms-3/752ba57259bcf6762b59acd78d25e647/transformed/material-1.0.0/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "10",
+                        "endOffsets": "222"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "264",
+                        "endLines": "8",
+                        "endColumns": "10",
+                        "endOffsets": "431"
+                    }
+                }
+            ]
+        }
+    ]
+}
