@@ -19,7 +19,28 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_cpf_fragment_to_regentrada_fragment2">
+                            <entry key="action_cpfFragment_to_regentradaFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="loginFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="212" />
+                            <option name="y" value="337" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_loginFragment_to_regentrada_fragment">
                               <value>
                                 <LayoutPositions />
                               </value>
@@ -34,18 +55,30 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="239" />
-                            <option name="y" value="13" />
+                            <option name="x" value="282" />
+                            <option name="y" value="-8" />
                           </Point>
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="action_regentrada_fragment_to_cpf_fragment2">
+                            <entry key="action_regentradaFragment_to_cpfFragment">
                               <value>
                                 <LayoutPositions />
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="settingsFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="13" />
+                            <option name="y" value="352" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

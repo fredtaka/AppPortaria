@@ -17,23 +17,23 @@ import java.lang.Object;
 
 public abstract class ListItemRegistroBinding extends ViewDataBinding {
   @NonNull
-  public final TextView cpfAchado;
-
-  @NonNull
-  public final TextView horarioRegistro;
-
-  @NonNull
   public final TextView nomeAchado;
+
+  @NonNull
+  public final TextView registroEntrada;
+
+  @NonNull
+  public final TextView registroSaida;
 
   @Bindable
   protected Registro mEntradasaida;
 
   protected ListItemRegistroBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextView cpfAchado, TextView horarioRegistro, TextView nomeAchado) {
+      TextView nomeAchado, TextView registroEntrada, TextView registroSaida) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.cpfAchado = cpfAchado;
-    this.horarioRegistro = horarioRegistro;
     this.nomeAchado = nomeAchado;
+    this.registroEntrada = registroEntrada;
+    this.registroSaida = registroSaida;
   }
 
   public abstract void setEntradasaida(@Nullable Registro entradasaida);
