@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "com.fsct.android.appportaria.app-mergeDebugResources-38:/values-v26/values-v26.xml",
+            "outputFile": "com.fsct.android.appportaria.app-mergeDebugResources-46:/values-v26/values-v26.xml",
             "map": [
+                {
+                    "source": "/home/fred/.gradle/caches/transforms-3/e2e7c77fe776ef75c827cea2949d143d/transformed/jetified-firebase-ui-auth-8.0.1/res/values-v26/values-v26.xml",
+                    "from": {
+                        "startLines": "2,6,10,14",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,253,438,631",
+                        "endLines": "5,9,13,17",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "248,433,626,806"
+                    },
+                    "to": {
+                        "startLines": "17,21,25,29",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "889,1087,1272,1465",
+                        "endLines": "20,24,28,32",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "1082,1267,1460,1640"
+                    }
+                },
                 {
                     "source": "/home/fred/.gradle/caches/transforms-3/506ebc9ecdd674d88ba75797fef0098d/transformed/appcompat-1.4.1/res/values-v26/values-v26.xml",
                     "from": {

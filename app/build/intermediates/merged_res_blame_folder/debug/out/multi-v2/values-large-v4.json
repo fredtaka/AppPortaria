@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.fsct.android.appportaria.app-mergeDebugResources-38:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.fsct.android.appportaria.app-mergeDebugResources-46:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/fred/.gradle/caches/transforms-3/752ba57259bcf6762b59acd78d25e647/transformed/material-1.0.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/home/fred/.gradle/caches/transforms-3/991bc3eccf12c53e27bec56337f7d291/transformed/material-1.4.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

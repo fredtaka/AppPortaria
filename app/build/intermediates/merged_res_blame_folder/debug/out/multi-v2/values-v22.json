@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.fsct.android.appportaria.app-mergeDebugResources-38:/values-v22/values-v22.xml",
+            "outputFile": "com.fsct.android.appportaria.app-mergeDebugResources-46:/values-v22/values-v22.xml",
             "map": [
                 {
                     "source": "/home/fred/.gradle/caches/transforms-3/506ebc9ecdd674d88ba75797fef0098d/transformed/appcompat-1.4.1/res/values-v22/values-v22.xml",

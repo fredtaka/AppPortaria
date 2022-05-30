@@ -28,15 +28,15 @@ public class ListItemRegistroBindingImpl extends ListItemRegistroBinding  {
     }
     private ListItemRegistroBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.TextView) bindings[1]
             , (android.widget.TextView) bindings[2]
             , (android.widget.TextView) bindings[3]
-            , (android.widget.TextView) bindings[1]
             );
-        this.cpfAchado.setTag(null);
-        this.horarioRegistro.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.nomeAchado.setTag(null);
+        this.registroEntrada.setTag(null);
+        this.registroSaida.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -103,9 +103,9 @@ public class ListItemRegistroBindingImpl extends ListItemRegistroBinding  {
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            com.fsct.android.appportaria.regentradatracker.BindingUtilsKt.setPermanenciaFormatted(this.cpfAchado, entradasaida);
-            com.fsct.android.appportaria.regentradatracker.BindingUtilsKt.setPermanenciaFormatted(this.horarioRegistro, entradasaida);
             com.fsct.android.appportaria.regentradatracker.BindingUtilsKt.setPermanenciaFormatted(this.nomeAchado, entradasaida);
+            com.fsct.android.appportaria.regentradatracker.BindingUtilsKt.setPermanenciaFormatted(this.registroEntrada, entradasaida);
+            com.fsct.android.appportaria.regentradatracker.BindingUtilsKt.setPermanenciaFormatted(this.registroSaida, entradasaida);
         }
     }
     // Listener Stub Implementations

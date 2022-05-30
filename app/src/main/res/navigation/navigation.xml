@@ -21,7 +21,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/regentrada_fragment">
+    app:startDestination="@id/loginFragment">
+
+        <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.fsct.android.appportaria.login.SettingsFragment"
+        android:label="fragment_settings">
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.fsct.android.appportaria.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_regentrada_fragment"
+            app:destination="@id/regentrada_fragment" />
+    </fragment>
+
+
 
     <fragment
         android:id="@+id/regentrada_fragment"

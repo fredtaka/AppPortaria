@@ -7,6 +7,7 @@ import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import com.fsct.android.appportaria.databinding.FragmentCpfBindingImpl;
+import com.fsct.android.appportaria.databinding.FragmentLoginBindingImpl;
 import com.fsct.android.appportaria.databinding.FragmentRegentradaBindingImpl;
 import com.fsct.android.appportaria.databinding.ListItemRegistroBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -22,14 +23,17 @@ import java.util.List;
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_FRAGMENTCPF = 1;
 
-  private static final int LAYOUT_FRAGMENTREGENTRADA = 2;
+  private static final int LAYOUT_FRAGMENTLOGIN = 2;
 
-  private static final int LAYOUT_LISTITEMREGISTRO = 3;
+  private static final int LAYOUT_FRAGMENTREGENTRADA = 3;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
+  private static final int LAYOUT_LISTITEMREGISTRO = 4;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(4);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.fsct.android.appportaria.R.layout.fragment_cpf, LAYOUT_FRAGMENTCPF);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.fsct.android.appportaria.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.fsct.android.appportaria.R.layout.fragment_regentrada, LAYOUT_FRAGMENTREGENTRADA);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.fsct.android.appportaria.R.layout.list_item_registro, LAYOUT_LISTITEMREGISTRO);
   }
@@ -48,6 +52,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentCpfBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_cpf is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTLOGIN: {
+          if ("layout/fragment_login_0".equals(tag)) {
+            return new FragmentLoginBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_login is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTREGENTRADA: {
           if ("layout/fragment_regentrada_0".equals(tag)) {
@@ -117,10 +127,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(4);
 
     static {
       sKeys.put("layout/fragment_cpf_0", com.fsct.android.appportaria.R.layout.fragment_cpf);
+      sKeys.put("layout/fragment_login_0", com.fsct.android.appportaria.R.layout.fragment_login);
       sKeys.put("layout/fragment_regentrada_0", com.fsct.android.appportaria.R.layout.fragment_regentrada);
       sKeys.put("layout/list_item_registro_0", com.fsct.android.appportaria.R.layout.list_item_registro);
     }
