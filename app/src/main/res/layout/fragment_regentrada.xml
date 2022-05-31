@@ -75,7 +75,7 @@
             android:layout_marginEnd="@dimen/margin"
             android:enabled="@{regentradaViewModel.stopButtonVisible}"
             android:onClick="@{() -> regentradaViewModel.onStop()}"
-            android:text="@string/stop"
+            android:text="Quem está dentro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/entrada_saida"
             app:layout_constraintTop_toTopOf="parent" />

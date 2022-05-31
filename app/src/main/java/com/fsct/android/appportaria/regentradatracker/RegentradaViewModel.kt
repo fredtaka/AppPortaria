@@ -88,8 +88,11 @@ class RegentradaViewModel(
      * Variable that tells the Fragment to navigate to a specific [SleepQualityFragment]
      *
      * This is private because we don't want to expose setting this value to the Fragment.
+     * modificado do original (abaixo) para evitar erro de variável não nullable
+     *     private val _navigateToCpf = MutableLiveData<Registro>()
+
      */
-    private val _navigateToCpf = MutableLiveData<Registro>()
+    private val _navigateToCpf:MutableLiveData<Registro> = MutableLiveData()
 
     /**
      * If this is non-null, immediately navigate to [SleepQualityFragment] and call [doneNavigating]
@@ -167,6 +170,9 @@ class RegentradaViewModel(
             insert(novoRegistro)
 
             esseRegistro.value = getEsseRegistroFromDatabase()
+
+            // Set state to navigate to the CpfFragment.
+            _navigateToCpf.value = novoRegistro
         }
     }
 
