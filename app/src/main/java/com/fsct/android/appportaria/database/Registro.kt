@@ -17,7 +17,7 @@ data class Registro(
         var registroId: Long = 0L,
 
         @ColumnInfo(name = "cpf_pessoa")
-        var cpfPessoa: Char = '0',
+        var cpfPessoa: String = "0",
 
         @ColumnInfo(name = "hora_entrada_ms")
         val horaEntradaMs: Long = System.currentTimeMillis(),

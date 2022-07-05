@@ -49,9 +49,14 @@ em função disso exibe imagem de seta de entrada ou de saída
             android:ems="11"
             android:hint="Digite o CPF aqui"
             android:inputType="number"
+            android:text="@={cpfViewModel.cpfDigitado}"
             app:layout_constraintBottom_toBottomOf="@+id/title_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/title_text"/>
+        <!-- aprender a usar o android:text -> https://medium.com/swlh/how-data-binding-helps-you-when-working-with-edittext-inside-recyclerview-543a1eb5f2cc -->
+<!-- avaliar https://stackoverflow.com/questions/61867330/how-to-debug-android-databinding-when-build-fails-with-error-cannot-resolve-ty -->
+
+
 
         <Button
             android:id="@+id/consultacpfbutton"
@@ -102,13 +107,13 @@ em função disso exibe imagem de seta de entrada ou de saída
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:text="Confirma Entrada"
+            android:onClick="@{() -> cpfViewModel.onConfirmaEntrada()}"
             app:layout_constraintEnd_toStartOf="@+id/saida_button"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/aviso_usuario"
             app:layout_constraintBottom_toBottomOf="parent"
         />
-        <!--TODO falta o onClick-->
 
 
         <Button

@@ -53,23 +53,23 @@ class RegentradaViewModel(
     /**
      * If esseRegistro has not been set, then the START button should be visible.
      */
-    val startButtonVisible = Transformations.map(esseRegistro) {
-        null == it
-    }
-
-    /**
-     * If esseRegistro has been set, then the STOP button should be visible.
-     */
-    val stopButtonVisible = Transformations.map(esseRegistro) {
-        null != it
-    }
-
-    /**
-     * If there are any registros in the database, show the CLEAR button.
-     */
-    val clearButtonVisible = Transformations.map(registros) {
-        it?.isNotEmpty()
-    }
+//    val startButtonVisible = Transformations.map(esseRegistro) {
+//        null == it
+//    }
+//
+//    /**
+//     * If esseRegistro has been set, then the STOP button should be visible.
+//     */
+//    val stopButtonVisible = Transformations.map(esseRegistro) {
+//        null != it
+//    }
+//
+//    /**
+//     * If there are any registros in the database, show the CLEAR button.
+//     */
+//    val clearButtonVisible = Transformations.map(registros) {
+//        it?.isNotEmpty()
+//    }
 
     /**
      * Request a toast by setting this value to true.
@@ -92,13 +92,17 @@ class RegentradaViewModel(
      *     private val _navigateToCpf = MutableLiveData<Registro>()
 
      */
-    private val _navigateToCpf:MutableLiveData<Registro> = MutableLiveData()
-
-    /**
-     * If this is non-null, immediately navigate to [SleepQualityFragment] and call [doneNavigating]
-     */
-    val navigateToCpf: LiveData<Registro>
+    private val _navigateToCpf = MutableLiveData<Boolean?>()
+    val navigateToCpf: LiveData<Boolean?>
         get() = _navigateToCpf
+
+
+
+    //opção: https://developer.android.com/topic/libraries/architecture/livedata?hl=pt-br
+
+    //Seguindo: https://medium.com/androiddevelopers/livedata-with-snackbar-navigation-and-other-events-the-singleliveevent-case-ac2622673150
+    //Recomendação oficial de 2022: https://medium.com/androiddevelopers/viewmodel-one-off-event-antipatterns-16a1da869b95
+
 
     /**
      * Call this immediately after calling `show()` on a toast.
@@ -120,43 +124,43 @@ class RegentradaViewModel(
         _navigateToCpf.value = null
     }
 
-    init {
-        initializeEsseRegistro()
-    }
-
-    private fun initializeEsseRegistro() {
-        viewModelScope.launch {
-            esseRegistro.value = getEsseRegistroFromDatabase()
-        }
-    }
-
-    /**
-     *  Handling the case of the stopped app or forgotten recording,
-     *  the start and end times will be the same.j
-     *
-     *  If the start time and end time are not the same, then we do not have an unfinished
-     *  recording.
-     */
-    private suspend fun getEsseRegistroFromDatabase(): Registro? {
-        var registro = database.getEsseRegistro()
-        if (registro?.horaSaidaMs != registro?.horaEntradaMs) {
-            registro = null
-        }
-        return registro
-    }
-
-    private suspend fun insert(registro: Registro) {
-        database.insert(registro)
-    }
-
+//    init {
+//        initializeEsseRegistro()
+//    }
+//
+//    private fun initializeEsseRegistro() {
+//        viewModelScope.launch {
+//            esseRegistro.value = getEsseRegistroFromDatabase()
+//        }
+//    }
+//
+//    /**
+//     *  Handling the case of the stopped app or forgotten recording,
+//     *  the start and end times will be the same.j
+//     *
+//     *  If the start time and end time are not the same, then we do not have an unfinished
+//     *  recording.
+//     */
+//    private suspend fun getEsseRegistroFromDatabase(): Registro? {
+//        var registro = database.getEsseRegistro()
+//        if (registro?.horaSaidaMs != registro?.horaEntradaMs) {
+//            registro = null
+//        }
+//        return registro
+//    }
+//
+//    private suspend fun insert(registro: Registro) {
+//        database.insert(registro)
+//    }
+//
     private suspend fun update(registro: Registro) {
         database.update(registro)
     }
 
-
-    private suspend fun clear() {
-        database.clear()
-    }
+//
+//    private suspend fun clear() {
+//        database.clear()
+//    }
 
     /**
      * Executes when the START button is clicked.
@@ -165,14 +169,17 @@ class RegentradaViewModel(
         viewModelScope.launch {
             // Create a new night, which captures the current time,
             // and insert it into the database.
-            val novoRegistro = Registro()
+            //val novoRegistro = Registro()
 
-            insert(novoRegistro)
+            //insert(novoRegistro)
 
-            esseRegistro.value = getEsseRegistroFromDatabase()
+            //esseRegistro.value = getEsseRegistroFromDatabase()
 
             // Set state to navigate to the CpfFragment.
-            _navigateToCpf.value = novoRegistro
+            //_navigateToCpf.value = novoRegistro
+
+
+            _navigateToCpf.value = true
         }
     }
 
@@ -192,7 +199,7 @@ class RegentradaViewModel(
             update(velhoRegistro)
 
             // Set state to navigate to the CpfFragment.
-            _navigateToCpf.value = velhoRegistro
+            _navigateToCpf.value = true
         }
     }
 

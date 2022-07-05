@@ -52,6 +52,17 @@ fun convertDurationToFormatted(horaEntradaMs: Long, horaSaidaMs: Long, res: Reso
     }
 }
 
+fun horaEntradaFormatted(horaEntradaMs: Long, res: Resources): String {
+    return SimpleDateFormat("EEEE MMM-dd-yyyy' Time: 'HH:mm")
+        .format(horaEntradaMs).toString()
+}
+
+//TODO: como está é inútil: dar propósito ou remover
+fun cpfDigitadoNumero(cpfPessoa: String, res: Resources): String {
+    return cpfPessoa
+}
+
+
 /**
 * Returns a string representing the numeric quality rating.
 */
@@ -72,12 +83,13 @@ fun convertNumericQualityToString(quality: Int, resources: Resources): String {
  *
  * EEEE - Display the long letter version of the weekday
  * MMM - Display the letter abbreviation of the month
+ * MM - versão númerica de mês
  * dd-yyyy - day in month and full year numerically
  * HH:mm - Hours and minutes in 24hr format
  */
 @SuppressLint("SimpleDateFormat")
 fun convertLongToDateString(systemTime: Long): String {
-    return SimpleDateFormat("EEEE MMM-dd-yyyy' Time: 'HH:mm")
+    return SimpleDateFormat("dd-MM-yyyy' Time: 'HH:mm")
             .format(systemTime).toString()
 }
 

@@ -20,6 +20,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -54,11 +55,13 @@ class CpfFragment : Fragment() {
                 inflater, R.layout.fragment_cpf, container, false)
 
         val application = requireNotNull(this.activity).application
-        val arguments = CpfFragmentArgs.fromBundle(requireArguments())
+//        val arguments = CpfFragmentArgs.fromBundle(requireArguments()) // removido com a mudança no val viewModeloFactory adiante
 
         // Create an instance of the ViewModel Factory.
         val dataSource = RegistroDatabase.getInstance(application).registroDatabaseDao
-        val viewModelFactory = CpfViewModelFactory(arguments.registroKey, dataSource)
+        // val viewModelFactory = CpfViewModelFactory(arguments.registroKey, dataSource)
+        val viewModelFactory = CpfViewModelFactory(dataSource) // importado do RegentradaFragment
+
 
         // Get a reference to the ViewModel associated with this fragment.
         val cpfViewModel =
@@ -72,6 +75,8 @@ class CpfFragment : Fragment() {
         // Add an Observer to the state variable for Navigating when a Quality icon is tapped.
         cpfViewModel.navigateToRegentrada.observe(viewLifecycleOwner, Observer {
             if (it == true) { // Observed state is true.
+                Toast.makeText(activity, "Entrada registrada", Toast.LENGTH_SHORT).show()
+
                 this.findNavController().navigate(
                         CpfFragmentDirections.actionCpfFragmentToRegentradaFragment())
                 // Reset state to make sure we only navigate once, even if the device

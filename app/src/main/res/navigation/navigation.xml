@@ -56,9 +56,9 @@
         android:name="com.fsct.android.appportaria.cpf.CpfFragment"
         android:label="@string/cpf_fragment"
         tools:layout="@layout/fragment_cpf">
-        <argument
-            android:name="registroKey"
-            app:argType="long" />
+<!--        <argument-->
+<!--            android:name="registroKey"-->
+<!--            app:argType="long" />-->
         <action
             android:id="@+id/action_cpfFragment_to_regentradaFragment"
             app:destination="@id/regentrada_fragment"
