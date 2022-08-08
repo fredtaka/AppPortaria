@@ -20,10 +20,10 @@ data class Registro(
         var cpfPessoa: String = "0",
 
         @ColumnInfo(name = "hora_entrada_ms")
-        val horaEntradaMs: Long = System.currentTimeMillis(),
+        var horaEntradaMs: Long = 0L,
 
         @ColumnInfo(name = "hora_saida_ms")
-        var horaSaidaMs: Long = System.currentTimeMillis(),
+        var horaSaidaMs: Long = 0L,
 
         @ColumnInfo(name = "grupo_pessoa")
         var grupoPessoa: Int = -1)

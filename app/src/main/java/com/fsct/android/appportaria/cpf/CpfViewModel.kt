@@ -64,7 +64,7 @@ class CpfViewModel(
     //TODO: mover isso para só iniciar registro se confirmar a entrada/saída
     init {
         initializeEsseRegistro()
-        cpfDigitado.value = "0"
+//        cpfDigitado.value = "0"
     }
 
     private fun initializeEsseRegistro() {
@@ -81,7 +81,7 @@ class CpfViewModel(
      *  recording.
      */
     private suspend fun getEsseRegistroFromDatabase(): Registro? {
-        var registro = database.getEsseRegistro()
+        var registro = database.getEsseRegistro() // getEsseRegistro é definido na Dao
 //        if (registro?.horaSaidaMs != registro?.horaEntradaMs) {
 //            registro = null
 //        }
@@ -122,9 +122,12 @@ class CpfViewModel(
     // checar o bindable em https://developer.android.com/topic/libraries/data-binding/two-way
     fun onConfirmaEntrada() {
         viewModelScope.launch {
-            val novoRegistro = Registro()
+            val cpfDigitado = "abc" // TODO: Isso não faz sentido! Colocado aqui só para procurar outros erros antes de resolver o envio do EditText para ca
+            val novoRegistro = Registro() // original do onStart do SleepTrackerViewModel
 
-            insert(novoRegistro)
+            insert(novoRegistro) // original do onStart do SleepTrackerViewModel
+
+
 
 //            esseRegistro.value = getEsseRegistroFromDatabase() // já fez em cima
 
@@ -132,18 +135,22 @@ class CpfViewModel(
 
             //esseRegistro.cpfPessoa = cpfDigitado
 
-            //val esseRegistro = database.get(sleepNightKey) //TODO: descobrir como é gerado esse valor no sleepTracker
-            //esseRegistro.cpfPessoa = cpfDigitado.value!!.toInt()
-            //database.update(esseRegistro)
+            // val esseRegistro = database.get(sleepNightKey) //TODO: descobrir como é gerado esse valor no sleepTracker
+
+            val provRegistro = esseRegistro.value ?: return@launch
+
+            provRegistro.horaEntradaMs = System.currentTimeMillis()
+            provRegistro.cpfPessoa = cpfDigitado
+            update(provRegistro)
 
 
             //database.update(esseRegistro)
 
-            val oldNight = esseRegistro.value ?: return@launch
+           // val oldNight = esseRegistro.value ?: return@launch //do onStop do SleepTrackerViewModel
 
-            oldNight.cpfPessoa = cpfDigitado.value()
+           // oldNight.cpfPessoa = cpfDigitado
 
-            update(oldNight)
+           // update(oldNight)
 
             // Setting this state variable to true will alert the observer and trigger navigation.
             _navigateToRegentrada.value = true
